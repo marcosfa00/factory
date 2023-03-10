@@ -10,13 +10,14 @@ public class Factory {
 
 
 
-public static Object getProducto(int device){ //devolvemos Interfaz
+public static ITransporte getProducto(int device){ //devolvemos Interfaz ITRANSPORTE YA QUE ASI SOLO DEVOLVEMOS OBJETOS QUE SOLO IMPLEMENTEN ESA INTERFAZ
     switch (device){
         case BICICLETA:
             return new Bicicleta();
 
         case CAMION:
             return new Camion();
+
 
         default:
             return null;

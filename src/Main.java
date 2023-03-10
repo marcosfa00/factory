@@ -4,7 +4,7 @@ import com.marcosfa.entradasalida.EntradaSalida;
 
 public class Main {
 
-    static Object obj;//es objeto, después se iguala con un new NombreClase
+    static ITransporte obj;//es objeto, después se iguala con un new NombreClase
     public static void main(String[] args) {
         Float coste = 0f;
 
