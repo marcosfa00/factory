@@ -66,3 +66,48 @@ donde tenemos la sede- En este caso vigo **36200**
 En este caso también tengo en cuenta que en un barco se pueden cargar objetos mucho más pesados y amplios por lo que 
 a la hora de añadir las medidas de los objetos o el peso he sido más permisivo
 
+
+# DIAGRAMA DE CLASES
+
+```mermaid
+classDiagram
+    App 
+    class App {
+        +main()
+    }
+      class ITransporte{
+        -cajaMadera
+        -cajaCarton
+        -Pallet
+        +costeTotal();
+        +tipoEmbalage();
+    }
+    class Barco {  
+        +costeTotal();
+        +tipoEmbalage();
+    }
+
+    class Bicicleta{
+    +costeTotal();
+        +tipoEmbalage();
+    }
+    class Camion{
+    +costeTotal();
+        +tipoEmbalage();
+    }
+    
+    class Factory{
+        -Camion =0;
+        -Bicicleta=1;
+        -Barco=2;
+        getProducto()ITransporte
+    }
+  
+    
+    Barco --> ITransporte
+    Bicicleta -->ITransporte
+    Camion-->ITransporte
+   
+
+```
+
